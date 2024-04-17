@@ -1,16 +1,14 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ProductListPage from './pages/ProductListPage';
 import ProductDetailPage from './pages/ProductDetailPage';
-import ProductSearchPage from './pages/ProductSearchPage';
+import ProductSearchListPage from './pages/ProductSearchListPage';
 
 export default function Router() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<ProductListPage />} />
-                <Route path="/search/:word" element={<ProductSearchPage />} />
-                <Route path="/detail/:id" element={<ProductDetailPage />} />
-            </Routes>
-        </BrowserRouter>
+        <Routes>
+            <Route path="/" element={<ProductListPage />} />
+            <Route path="/search/:word" element={<ProductSearchListPage />} />
+            <Route path="/detail/:id" element={<ProductDetailPage />} />
+        </Routes>
     );
 }
