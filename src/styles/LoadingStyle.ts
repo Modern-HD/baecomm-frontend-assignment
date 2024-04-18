@@ -2,19 +2,19 @@ import styled, { keyframes } from 'styled-components';
 
 export const loading = keyframes`
     0%{
-        background-color: rgb(240 240 240);
+        background-color: rgb(230 230 230);
     }
     
     35% {
-        background-color: rgb(235 235 234);
+        background-color: rgb(225 225 225);
     }
 
     70%{
-        background-color: rgb(225 225 225);
+        background-color: rgb(215 215 215);
     }
     
     100%{
-        background-color: rgb(240 240 240);
+        background-color: rgb(230 230 230);
     }
 `;
 

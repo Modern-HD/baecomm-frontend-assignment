@@ -26,7 +26,7 @@ export const Card = styled.div`
     height: 400px;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     background-color: white;
-    border-radius: 3%;
+    border-radius: 5px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -96,4 +96,10 @@ export const PriceText = styled(Text)`
     color: 'black';
     padding: 5px 10px;
     font-size: ${({ theme }) => theme.fontSize.lg};
+`;
+
+export const InfoText = styled.p`
+    margin-top: 20px;
+    text-align: center;
+    font-size: ${({ theme }) => theme.fontSize.xl};
 `;

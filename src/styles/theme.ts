@@ -12,9 +12,11 @@ const fontSize = {
     lg: '1.1rem',
     xl: '1.25rem',
     xxl: '1.5rem',
+    xxxl: '2rem',
 };
 
 const color = {
+    sky: 'rgb(96 165 250)',
     blue: 'rgb(59 130 246)',
     bg: 'rgb(244 244 245)',
 };

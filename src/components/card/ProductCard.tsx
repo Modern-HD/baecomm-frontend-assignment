@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import IProduct from '../../interfaces/IProduct';
+import { TProductCard } from '../../interfaces/IProduct';
 import {
     BrandText,
     Card,
@@ -12,7 +12,7 @@ import {
 import { Link } from 'react-router-dom';
 
 interface Props {
-    product: IProduct;
+    product: TProductCard;
 }
 
 export default function ProductCard({ product }: Props) {
@@ -27,13 +27,13 @@ export default function ProductCard({ product }: Props) {
                     setMouseOver(false);
                 }}
             >
+                <ImageRoot>
+                    <ImageArea src={product.thumbnail} />
+                </ImageRoot>
                 <TitleColumn $isOver={isMouseOver}>
                     <BrandText>{product.brand}</BrandText>
                     <TitleText>{product.title}</TitleText>
                 </TitleColumn>
-                <ImageRoot>
-                    <ImageArea src={product.thumbnail} />
-                </ImageRoot>
                 <PriceText>${product.price}</PriceText>
             </Card>
         </Link>

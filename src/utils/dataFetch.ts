@@ -45,7 +45,6 @@ export async function getLimitAndSkipSearchedProducts<T extends keyof IProduct>(
     select?: T[]
 ) {
     let url = `https://dummyjson.com/products/search?q=${word}&limit=${limit}&skip=${skip}`;
-    console.log(url);
     if (select instanceof Array) {
         url += `&select=${select.join(',')}`;
     }

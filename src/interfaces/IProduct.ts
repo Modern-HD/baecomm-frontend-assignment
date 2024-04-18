@@ -13,3 +13,5 @@ export default interface IProduct {
     thumbnail: string;
     images: string[];
 }
+
+export type TProductCard = Pick<IProduct, 'id' | 'thumbnail' | 'brand' | 'title' | 'price'>;
