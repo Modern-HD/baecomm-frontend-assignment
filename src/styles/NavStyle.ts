@@ -49,6 +49,7 @@ export const SearchButton = styled(StyledButton)`
     height: 35px;
     border: 1px solid black;
     font-size: ${({ theme }) => theme.fontSize.md};
+    color: black;
 
     &:hover {
         border: 1px solid ${({ theme }) => theme.color.blue};
