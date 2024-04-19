@@ -1,6 +1,5 @@
 import IProduct from '../interfaces/IProduct';
 import IProductList from '../interfaces/IProductList';
-import TCategories from '../interfaces/TCategories';
 
 export async function fetchUtil<T>(url: string): Promise<T | undefined> {
     const result = await fetch(url)
@@ -14,16 +13,8 @@ export async function fetchUtil<T>(url: string): Promise<T | undefined> {
     return result;
 }
 
-export async function getAllProducts() {
-    return await fetchUtil<IProductList>('https://dummyjson.com/products');
-}
-
 export async function getSingleProduct(id: number) {
     return await fetchUtil<IProduct>(`https://dummyjson.com/products/${id}`);
-}
-
-export async function getSearchedProduct(word: string) {
-    return await fetchUtil<IProductList>(`https://dummyjson.com/products/search?q=${word}`);
 }
 
 export async function getLimitAndSkipProducts<T extends keyof IProduct>(
@@ -49,8 +40,4 @@ export async function getLimitAndSkipSearchedProducts<T extends keyof IProduct>(
         url += `&select=${select.join(',')}`;
     }
     return await fetchUtil<IProductList<Pick<IProduct, T>>>(url);
-}
-
-export async function getCategories() {
-    return fetchUtil<TCategories[]>('https://dummyjson.com/products/categories');
 }
