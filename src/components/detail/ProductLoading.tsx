@@ -8,7 +8,7 @@ import {
     ThumbnailImage,
 } from '../../styles/ProductDetailStyle';
 
-export default function ProductLading() {
+export default function ProductLoading() {
     return (
         <>
             <InfoContainer>

@@ -6,7 +6,7 @@ import IProduct from '../interfaces/IProduct';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getSingleProduct } from '../utils/dataFetch';
 import ProductInfo from '../components/detail/ProductInfo';
-import ProductLading from '../components/detail/ProductLading';
+import ProductLoading from '../components/detail/ProductLoading';
 
 export default function ProductDetailPage() {
     const { id } = useParams();
@@ -41,7 +41,7 @@ export default function ProductDetailPage() {
         <FlexContainer>
             <PaddingContainer>
                 {product && <ProductInfo product={product} />}
-                {!product && <ProductLading />}
+                {!product && <ProductLoading />}
             </PaddingContainer>
         </FlexContainer>
     );

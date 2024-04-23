@@ -4,7 +4,7 @@ export default interface IProduct {
     id: number;
     title: string;
     description: string;
-    price: 549;
+    price: number;
     discountPercentage: number;
     rating: number;
     stock: number;
